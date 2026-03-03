@@ -6,7 +6,9 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar style="inverted" />
       <Image source={require('./assets/picapau.jpg')} style={styles.logo} /*faz com que a imagem caiba exatamente no espço determinado*/ resizeMode='contain'/>
-      <Text>Pica-Pau é um personagem da série estadunidense {'\n'}de mesmo nome, um pica-pau antropomórfico, que {'\n'}estrelou vários curta-metragens de animação produzidos{'\n'} pelo estúdio de Walter Lantz e distribuídos pela{'\n'} Universal Pictures.</Text>
+      <Text>
+        Pica-Pau é um personagem da série estadunidense {'\n'}de mesmo nome, um pica-pau antropomórfico, que {'\n'}estrelou vários curta-metragens de animação produzidos{'\n'} pelo estúdio de Walter Lantz e distribuídos pela{'\n'} Universal Pictures.
+      </Text>
     </View>
   );
 }
