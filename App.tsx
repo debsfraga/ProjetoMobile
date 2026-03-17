@@ -1,27 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image} from 'react-native';
+//Menu
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <StatusBar style="inverted" />
-      <Image source={require('./assets/logo2.png')} style={styles.logo} /*faz com que a imagem caiba exatamente no espço determinado*/ resizeMode='contain'/>
-      <Text>
-          {/* adicionar textinho dps */}
-      </Text>
-    </View>
-  );
+//Tela do Sobre
+import Sobre from './telas/sobre';
+
+//Configuração do menu
+const Tab = createBottomTabNavigator();
+
+//Cria a estrutura do menu
+function Menu() {
+  return <Tab.Navigator>
+    <Tab.Screen name='Sobre' component={Sobre} />
+  </Tab.Navigator>
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#4eccab',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  logo: {
-    width: 550,
-    height: 550,
-  }
-});
+export default function App() {
+
+  return (
+    <NavigationContainer>
+      <Menu />
+    </NavigationContainer>
+  );
+}
