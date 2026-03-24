@@ -1,7 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, ScrollView} from 'react-native';
 import { useVideoPlayer, VideoView } from 'expo-video';
-import { use } from 'react';
+
+//Componente de Texto Padrão
+import TextoPadrao from '../componentes/TextoPadrao';
 
 export default function Sobre() {
 
@@ -12,9 +14,9 @@ export default function Sobre() {
     <ScrollView style={styles.container}>
       <StatusBar style="inverted" />
       <Image source={require('../assets/logo2.png')} style={styles.logo} /*faz com que a imagem caiba exatamente no espço determinado*/ resizeMode='contain'/>
-      <Text>
+      <TextoPadrao estiloEspecifico={styles.texto}>
           Um espaço feito para guardar histórias,{'\n'} marcar momentos e acompanhar cada{'\n'} página da sua jornada de leitura.{'\n'}{'\n'}
-      </Text>
+      </TextoPadrao>
       <Image source={require('../assets/livros.jpg')} style={styles.img1} resizeMode='contain'/>
       <VideoView player={player} style={styles.video} allowsPictureInPicture/>
     </ScrollView>
@@ -24,7 +26,13 @@ export default function Sobre() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#9cddcc'
+    backgroundColor: '#9cddcc',
+    paddingHorizontal: 16,
+  },
+  texto:{
+    color: 'black',
+    fontSize: 18,
+    textAlign: 'center',  
   },
   logo: {
     width: 550,
