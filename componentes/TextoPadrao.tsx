@@ -6,6 +6,7 @@ export default function TextoPadrao({children, estiloEspecifico}: any) {
 
 const estilos = StyleSheet.create({
   padrao: {
+    fontFamily : 'MontserratAlternates',
     fontSize: 18,
     textAlign: 'center',
     lineHeight: 20,

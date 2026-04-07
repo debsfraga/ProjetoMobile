@@ -1,7 +1,12 @@
+import { View } from "react-native";
+
 //Menu
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from '@expo/vector-icons/Ionicons';
+
+// Fonte
+import { useFonts, MontserratAlternates_400Regular, MontserratAlternates_500Medium,} from '@expo-google-fonts/montserrat-alternates';
 
 //Tela do Sobre
 import Sobre from './telas/sobre';
@@ -42,6 +47,17 @@ function Menu() {
 }
 
 export default function App() {
+
+  // Carrega a fonte
+  const [fonteCarregada] = useFonts({
+    "MontserratAlternates": MontserratAlternates_400Regular,
+    "MontserratTitulo" : MontserratAlternates_500Medium
+  });
+
+  // Verifica se a fonte foi carregada
+  if (!fonteCarregada) {
+    return <View></View>;
+  }
 
   return (
     <NavigationContainer>
