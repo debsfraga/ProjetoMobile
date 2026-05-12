@@ -11,6 +11,14 @@ import { useFonts, MontserratAlternates_400Regular, MontserratAlternates_500Medi
 //Tela do Sobre
 import Sobre from './telas/sobre';
 
+//Tela de Produtos (lista)
+import Produtos from './telas/Produtos/Index';
+import ListaProdutos from './telas/mocks/listaProduto'
+
+function MenuProdutos(){
+  return <Produtos {...ListaProdutos} />
+}
+
 //Configuração do menu
 const Tab = createBottomTabNavigator();
 
@@ -41,7 +49,7 @@ function Menu() {
       tabBarInactiveTintColor: 'gray',
     })}>
     <Tab.Screen name='Sobre' component={Sobre} />
-    <Tab.Screen name='Lista' component={Sobre} />
+    <Tab.Screen name='Produtos' component={MenuProdutos} />
     <Tab.Screen name='Perfil' component={Sobre} />
   </Tab.Navigator>
 }
