@@ -4,6 +4,7 @@ const lista_produtos = {
         lista: [
             {
                 id: 1,
+<<<<<<< HEAD
                 nome: "Todas as suas (im)perfeições",
                 descricao: "Uma história de amor perfeita é suficiente para manter vivo o casamento entre duas pessoas imperfeitas? Quando a dança começa, a sincronia é perfeita, os passos seguem o ritmo, as mãos não se soltam, os olhos jamais se deixam. Mas a música pode acabar a qualquer momento... É possível valsar no silêncio?",
                 imagem: require('../../assets/todas_as_imperfeicoes.jpg'),
@@ -37,6 +38,17 @@ const lista_produtos = {
                 nome: "A hipótese do amor",
                 descricao: "Quando um namoro de mentira entre cientistas encontra a irresistível força da atração, todas as teorias cuidadosamente calculadas sobre o amor são postas à prova.Com personagens cativantes e diálogos inteligentes, A Hipótese do Amor é uma história de amor contemporânea que desafia as convenções e celebra a beleza da imperfeição humana. Prepare-se para rir, chorar e se apaixonar por esta história única e inesquecível.",
                 imagem: require('../../assets/aHipoteseDoAmor.jpg'),
+=======
+                nome: "Livro",
+                descricao: "4pcs. Temos outros modelos e cores.",
+                imagem: require('../../assets/logo.png'),
+            },
+            {
+                id: 2,
+                nome: "Livro2",
+                descricao: "4pcs. Temos outros modelos e cores.",
+                imagem: require('../../assets/logo.png'),
+>>>>>>> f0a22a510dad3f76215f6f6b06d5cf9ecb8c5c36
             },
         ]
     }
